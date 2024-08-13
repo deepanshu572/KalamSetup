@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .answer {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main main-update">
+      <div class="head1-admin">
+        <span class="i-wala"
+          ><i class="bi bi-question-circle-fill"></i>
+          <p>Help</p>
+        </span>
+      </div>
+      <div class="head2-admin">
+        <span class="admin-1 active-something">1</span>
+        <span class="admin-1">2</span>
+        <span class="admin-1">3</span>
+        <span class="admin-1">4</span>
+        <span class="admin-1">5</span>
+        <span class="admin-1">6</span>
+      </div>
+      <div class="head3-admin">
+        <p class="pa-admin1">Your Details</p>
+        <div class="head3-input">
+          <div class="input-field">
+            <input type="text" required spellcheck="false" />
+            <label>Enter name</label>
+          </div>
+          <div class="input-field">
+            <input type="text" required spellcheck="false" />
+            <label>Enter mobile no</label>
+          </div>
+          <div class="input-field">
+            <input type="text" required spellcheck="false" />
+            <label>Enter email</label>
+          </div>
+        </div>
+      </div>
+      <div class="head3-admin">
+        <p class="pa-admin2">App Details</p>
+        <div class="head3-input">
+          <div class="input-field">
+            <input type="text" required spellcheck="false" />
+            <label>App Name</label>
+          </div>
+          <div class="input-field">
+            <input type="text" required spellcheck="false" />
+            <label>App Discription</label>
+          </div>
+          <div class="input-field">
+            <input type="text" required spellcheck="false" />
+            <label>Upload Logo</label>
+          </div>
+          <select>
+            <option value="CHOSSE Language">Choose Language</option>
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Marathi">Marathi</option>
+          </select>
+          <div class="input-field">
+            <input type="text" required spellcheck="false" />
+            <label>Helpline No</label>
+          </div>
+        </div>
+      </div>
+      <div class="head3-admin head3-admin-update">
+        <p class="pa-admin3">Store Details</p>
+        <div class="head3-input">
+          <div class="checkbox-admin question">
+            <input
+              class="coupon_question"
+              type="checkbox"
+              name="coupon_question"
+              value="1"
+              onchange="valueChanged()"
+            />
+            <p>I have a physical store</p>
+          </div>
+          <div class="depends answer">
+            <div class="checkbox-admin checkbox-admin-new">
+              <input type="checkbox" />
+              <p>Pickup at store</p>
+            </div>
+
+            <div class="input-field">
+              <input
+                type="text"
+                required
+                spellcheck="false"
+                name="coupon_field"
+                id="coupon_field"
+              />
+              <label>STORE ADDRESS</label>
+            </div>
+            <div class="city-admin">
+              <div class="input-field">
+                <input
+                  type="text"
+                  required
+                  spellcheck="false"
+                  name="coupon_field"
+                  id="coupon_field"
+                />
+                <label>CITY</label>
+              </div>
+              <div class="input-field">
+                <input
+                  type="text"
+                  required
+                  spellcheck="false"
+                  name="coupon_field"
+                  id="coupon_field"
+                />
+                <label>PIN CODE</label>
+              </div>
+            </div>
+            <select>
+              <option value="CHOSSE LOCATION">Choose Location</option>
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Bengali">Bengali</option>
+              <option value="Marathi">Marathi</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="footer-admin">
+        <a href="part2.html"><button>CREATE</button></a>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function valueChanged() {
+        if ($(".coupon_question").is(":checked")) $(".answer").show();
+        else $(".answer").hide();
+      }
+    </script>
+    <script src="script/myscript.js"></script>
+  </body>
+</html>
